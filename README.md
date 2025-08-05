@@ -1,1 +1,1 @@
-# Portfolio Site Using React + Framer Motion
+# Portfolio Site Using React + TypeScript + Framer Motion

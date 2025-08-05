@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import type React from "react";
 
-export const CustomContainer = ({
+const CustomContainer = ({
     children,
     className = "",
     style = {},
@@ -16,3 +16,5 @@ export const CustomContainer = ({
         </div>
     );
 };
+
+export default CustomContainer;
