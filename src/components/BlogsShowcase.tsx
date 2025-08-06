@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { blogInterface } from "../types/types";
+import { getTrucateStr } from "../utils/helpers";
 
 const BlogsShowcase = ({ blogs }: { blogs: blogInterface[] }) => {
     return (
@@ -11,14 +12,14 @@ const BlogsShowcase = ({ blogs }: { blogs: blogInterface[] }) => {
                     className="flex flex-row justify-between"
                 >
                     <div className="flex max-w-lg flex-col items-start gap-2">
-                        <h1 className="text-primary text-lg text font-bold">
+                        <h1 className="text-primary text-xl text font-semibold">
                             {el.title}
                         </h1>
-                        <p className="text-secondary">{el.desc}</p>
+                        <p className="text-secondary">{getTrucateStr(el.desc)}</p>
                     </div>
 
                     <span className="text-secondary">
-                        {el.dateCreated.getDate()}
+                        {el.dateCreated.toDateString()}
                     </span>
                 </Link>
             ))}

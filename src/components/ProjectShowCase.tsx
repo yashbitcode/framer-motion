@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const ProjectShowCase = ({ projects }: { projects: projectInterface[] }) => {
     return (
-        <div className="mt-8 grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4">
             {projects.map((el, idx) => (
                 <motion.div
                     key={el.id}

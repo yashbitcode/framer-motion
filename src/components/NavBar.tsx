@@ -1,6 +1,12 @@
 import { UserRound } from "lucide-react";
 import { navItems } from "../constants/constants";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import {
+    motion,
+    useMotionTemplate,
+    useMotionValueEvent,
+    useScroll,
+    useTransform,
+} from "motion/react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -9,6 +15,9 @@ const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
 
     const { scrollY } = useScroll();
+    const y = useTransform(scrollY, [0, 100], [5, 10]);
+    const width = useTransform(scrollY, [0, 100], [100, 90]);
+    const borderRadius = useTransform(scrollY, [0, 100], [0, 50]);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         if (latest > 20) setScrolled(true);
@@ -17,14 +26,18 @@ const NavBar = () => {
 
     return (
         <motion.header
-            animate={{
+            style={{
                 boxShadow: scrolled ? "var(--shadow-primary)" : "none",
-                width: scrolled ? "90%" : "100%",
-                borderRadius: scrolled ? "100px" : "0%",
+                width: useMotionTemplate`${width}%`,
+                borderRadius: useMotionTemplate`${borderRadius}px`,
+                y,
             }}
-            className="sticky top-2 mx-auto flex items-center justify-between px-3 py-2 backdrop-blur-md"
+            className="sticky z-20 top-0 mx-auto bg-white/50 flex items-center justify-between px-3 py-2 backdrop-blur-md"
         >
-            <Link to={"/"} className="shadow-primary rounded-full p-3 text-neutral-600">
+            <Link
+                to={"/"}
+                className="shadow-primary rounded-full p-3 text-neutral-600"
+            >
                 <UserRound />
             </Link>
 
@@ -37,7 +50,9 @@ const NavBar = () => {
                             onMouseEnter={() => setHovered(idx)}
                             onMouseLeave={() => setHovered(null)}
                         >
-                            <Link to={el.href} className="relative z-10">{el.title}</Link>
+                            <Link to={el.href} className="relative z-10">
+                                {el.title}
+                            </Link>
 
                             {hovered === idx && (
                                 <motion.span

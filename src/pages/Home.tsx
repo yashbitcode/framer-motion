@@ -1,13 +1,20 @@
+import BlogsShowcase from "../components/BlogsShowcase";
 import ProjectShowCase from "../components/ProjectShowCase";
 import TopHeading from "../components/TopHeading";
-import { allProjects } from "../constants/constants";
+import { allBlogs, allProjects } from "../constants/constants";
 
 const Home = () => {
-
     return (
         <div>
             <TopHeading title="Lorem Ipsum." desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non officiis libero debitis error dolorum." />
-            <ProjectShowCase projects={allProjects} />
+            <div className="mt-6 flex flex-col gap-4">
+                <h1>Projects Lorem, ipsum dolor.</h1>
+                <ProjectShowCase projects={allProjects} />
+            </div>
+            <div className="mt-6 flex flex-col gap-4">
+                <h1>Blogs Lorem, ipsum dolor.</h1>
+                <BlogsShowcase blogs={allBlogs} />
+            </div>      
         </div>
     );
 };

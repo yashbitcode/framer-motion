@@ -8,11 +8,12 @@ import Blogs from "./pages/blogs/Blogs";
 import Contact from "./pages/Contact";
 import NextBlog from "./pages/blogs/mainBlogs/NextBlog";
 import TailwindBlog from "./pages/blogs/mainBlogs/TailwindBlog";
+import BlogFront from "./components/BlogFront";
 
 const AppLayout = () => {
     return (
         <div className="bg-neutral-100">
-            <CustomContainer className="relative min-h-screen bg-white px-5">
+            <CustomContainer className="relative min-h-[200vh] bg-white px-5">
                 <NavBar />
                 <div className="mt-8">
                     <Outlet />
@@ -42,14 +43,20 @@ const routes = createBrowserRouter([
             {
                 path: "blogs",
                 element: <Blogs />,
-            },
-            {
-                path: "blogs/tailwind",
-                element: <TailwindBlog />,
-            },
-            {
-                path: "blogs/next",
-                element: <NextBlog />,
+                children: [
+                    {
+                        index: true,
+                        element: <BlogFront />
+                    },
+                    {
+                        path: "tailwind",
+                        element: <TailwindBlog />,
+                    },
+                    {
+                        path: "next",
+                        element: <NextBlog />,
+                    },
+                ],
             },
             {
                 path: "contact",

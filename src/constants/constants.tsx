@@ -50,13 +50,14 @@ export const allBlogs: blogInterface[] = [
         title: "Lorem ipsum dolor sit amet.",
         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque unde similique eos, quisquam suscipit at architecto minima excepturi odio? Sed.",
         dateCreated: new Date(),
-        href: "/tailwind"
+        href: "/blogs/tailwind"
     },
     {
         id: "2",
         title: "Lorem ipsum dolor sit amet.",
         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque unde similique eos, quisquam suscipit at architecto minima excepturi odio? Sed.",
         dateCreated: new Date(),
-        href: "/next"
+        href: "/blogs/next"
     },
+    
 ];
