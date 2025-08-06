@@ -2,6 +2,7 @@ import { UserRound } from "lucide-react";
 import { navItems } from "../constants/constants";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     const [hovered, setHovered] = useState<number | null>(null);
@@ -10,7 +11,7 @@ const NavBar = () => {
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        if(latest > 20) setScrolled(true);
+        if (latest > 20) setScrolled(true);
         else setScrolled(false);
     });
 
@@ -19,14 +20,13 @@ const NavBar = () => {
             animate={{
                 boxShadow: scrolled ? "var(--shadow-primary)" : "none",
                 width: scrolled ? "90%" : "100%",
-                borderRadius: scrolled ? "100px" : "0%"
-
+                borderRadius: scrolled ? "100px" : "0%",
             }}
-            className="flex sticky mx-auto top-2 items-center justify-between px-3 py-2"
+            className="sticky top-2 mx-auto flex items-center justify-between px-3 py-2 backdrop-blur-md"
         >
-            <div className="shadow-primary rounded-full p-3 text-neutral-600">
+            <Link to={"/"} className="shadow-primary rounded-full p-3 text-neutral-600">
                 <UserRound />
-            </div>
+            </Link>
 
             <nav>
                 <ul className="flex">
@@ -37,8 +37,7 @@ const NavBar = () => {
                             onMouseEnter={() => setHovered(idx)}
                             onMouseLeave={() => setHovered(null)}
                         >
-                            {/* <Link to={el.href}>{el.title}</Link> */}
-                            <span className="relative z-10">{el.title}</span>
+                            <Link to={el.href} className="relative z-10">{el.title}</Link>
 
                             {hovered === idx && (
                                 <motion.span

@@ -1,0 +1,50 @@
+# 🚀 Introduction to Next.js
+
+Next.js is a powerful **React framework** that enables you to build **server-side rendered (SSR)** and **static web applications** using React. It offers a great developer experience with features like **file-based routing**, **API routes**, and **full-stack capabilities** out of the box.
+
+## ✅ Why Choose Next.js?
+
+Here are some compelling reasons to use Next.js for your next project:
+
+- **SEO Friendly** – Supports Server Side Rendering (SSR) and Static Site Generation (SSG)
+- **Built-in Routing** – No need for React Router
+- **Performance** – Automatic code splitting
+- **API Routes** – Build backend functionality within the same project
+- **Image Optimization** – Next.js includes a powerful `<Image />` component
+
+---
+
+## 📦 Installation
+
+To get started with Next.js, run the following command using NPX:
+
+```bash
+npx create-next-app@latest my-next-app
+
+```bash
+cd my-next-app
+
+```lua
+my-next-app/
+├── pages/
+│   ├── index.tsx
+│   └── about.tsx
+├── public/
+├── styles/
+├── components/
+├── next.config.js
+└── package.json
+
+```tsx
+// pages/static.tsx
+export async function getStaticProps() {
+  return {
+    props: {
+      message: "Hello from SSG",
+    },
+  };
+}
+
+export default function StaticPage({ message }) {
+  return <div>{message}</div>;
+}
