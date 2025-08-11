@@ -1,17 +1,13 @@
-import type { CSSProperties } from "react";
-import type React from "react";
+import type { CustomContainerInterface } from "../types/types";
 
 const CustomContainer = ({
     children,
     className = "",
     style = {},
-}: {
-    children: React.ReactNode;
-    className?: string;
-    style?: CSSProperties;
-}) => {
+    ...props
+}: CustomContainerInterface) => {
     return (
-        <div className={`w-full max-w-4xl ${className} mx-auto`} style={style}>
+        <div className={`w-full max-w-4xl ${className} mx-auto`} style={style} {...props}>
             {children}
         </div>
     );

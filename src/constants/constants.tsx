@@ -46,6 +46,24 @@ export const allProjects: projectInterface[] = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
     },
+    {
+        id: "4",
+        title: "Lorem, ipsum.",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
+    },
+    {
+        id: "5",
+        title: "Lorem, ipsum.",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
+    },
+    {
+        id: "6",
+        title: "Lorem, ipsum.",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
+    },
 ];
 
 export const allBlogs: blogInterface[] = [

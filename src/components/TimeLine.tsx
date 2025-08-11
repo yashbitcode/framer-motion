@@ -29,7 +29,7 @@ const TimeLine = () => {
                             whileInView="inView"
                             viewport={{ once: true, amount: 0.5 }}
                             transition={{
-                                duration: 0.3,
+                                duration: 0.4,
                                 ease: "easeInOut",
                                 delay: idx * 0.08,
                             }}
@@ -49,9 +49,9 @@ const TimeLine = () => {
                                             amount: 0.4,
                                         }}
                                         transition={{
-                                            duration: 0.3,
+                                            duration: 0.4,
                                             ease: "easeInOut",
-                                            delay: idx1 * 0.08,
+                                            delay: idx1 * 0.1,
                                         }}
                                         className="relative top-1"
                                     >
@@ -70,9 +70,9 @@ const TimeLine = () => {
                                                 amount: 0.5,
                                             }}
                                             transition={{
-                                                duration: 0.3,
+                                                duration: 0.4,
                                                 ease: "easeInOut",
-                                                delay: idx1 * 0.08,
+                                                delay:idx1 * 0.1,
                                             }}
                                             className="text-primary text-[1.05rem] font-normal"
                                         >
@@ -87,9 +87,9 @@ const TimeLine = () => {
                                                 amount: 0.5,
                                             }}
                                             transition={{
-                                                duration: 0.3,
+                                                duration: 0.4,
                                                 ease: "easeInOut",
-                                                delay: idx1 * 0.09,
+                                                delay: idx1 * 0.15,
                                             }}
                                             className="text-secondary mt-1.5 text-sm"
                                         >
