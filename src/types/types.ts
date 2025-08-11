@@ -3,7 +3,7 @@ export interface projectInterface {
     title: string;
     desc: string;
     imgSrc: string;
-};
+}
 
 export interface blogInterface {
     dateCreated: Date;
@@ -11,4 +11,12 @@ export interface blogInterface {
     title: string;
     desc: string;
     href: string;
-};
+}
+
+export interface timelineInterface {
+    yr: number;
+    content: {
+        title: string;
+        desc: string;
+    }[];
+}
