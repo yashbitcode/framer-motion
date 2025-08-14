@@ -12,8 +12,10 @@ import BlogFront from "./components/BlogFront";
 
 const AppLayout = () => {
     return (
-        <div className="bg-neutral-100">
-            <CustomContainer className="relative min-h-screen bg-white px-5">
+        <div className="bg-neutral-100 [--pattern-fg:var(--color-gray-950)]/5">
+            <CustomContainer className="relative min-h-screen bg-white px-11">
+                <div className="absolute top-0 -right-0 h-full bg-white w-7 border-x border-[#f3f3f3] bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed" />
+                <div className="absolute top-0 -left-0 h-full bg-white w-7 border-x border-[#f3f3f3] bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed" />
                 <NavBar />
                 <div className="mt-8">
                     <Outlet />
@@ -46,7 +48,7 @@ const routes = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        element: <BlogFront />
+                        element: <BlogFront />,
                     },
                     {
                         path: "tailwind",

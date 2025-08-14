@@ -16,7 +16,7 @@ const NavBar = () => {
 
     const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 100], [5, 10]);
-    const width = useTransform(scrollY, [0, 100], [100, 90]);
+    const width = useTransform(scrollY, [0, 100], [100, 75]);
     const borderRadius = useTransform(scrollY, [0, 100], [0, 50]);
 
     useMotionValueEvent(scrollY, "change", (latest) => {

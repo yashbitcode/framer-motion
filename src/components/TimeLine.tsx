@@ -1,6 +1,7 @@
 import { CircleCheck } from "lucide-react";
 import { timeline } from "../constants/constants";
 import { motion } from "motion/react";
+import SectionHeading from "./SectionHeading";
 
 const TimeLine = () => {
     const variant = {
@@ -18,7 +19,7 @@ const TimeLine = () => {
 
     return (
         <div className="mt-6 flex flex-col gap-6">
-            <h1>Timeline Lorem, ipsum dolor.</h1>
+            <SectionHeading>Timeline Lorem, ipsum dolor.</SectionHeading>
             <div className="flex flex-col gap-8">
                 {timeline.map((el, idx) => (
                     <div className="flex flex-col gap-4" key={el.yr}>

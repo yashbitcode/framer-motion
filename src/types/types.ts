@@ -35,3 +35,9 @@ export interface CustomInputInterface extends React.InputHTMLAttributes<HTMLInpu
     className?: string;
     style?: CSSProperties;
 }
+
+export interface reviewInterface {
+    name: string;
+    review: string;
+    avatar: string;
+}
