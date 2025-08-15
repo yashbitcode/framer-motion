@@ -1,3 +1,5 @@
+import { RiAngularjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { FaCss3Alt, FaHtml5, FaJs, FaReact, FaVuejs } from "react-icons/fa";
 import type {
     blogInterface,
     projectInterface,
@@ -34,36 +36,120 @@ export const allProjects: projectInterface[] = [
         title: "Lorem, ipsum.",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
+        techUsed: [
+            {
+                icon: <FaReact />,
+                name: "React",
+            },
+            {
+                icon: <RiTailwindCssFill />,
+                name: "Tailwind",
+            },
+            {
+                icon: <FaVuejs />,
+                name: "Vue",
+            },
+        ],
     },
     {
         id: "2",
         title: "Lorem, ipsum.",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
+        techUsed: [
+            {
+                icon: <FaHtml5 />,
+                name: "HTML",
+            },
+            {
+                icon: <FaCss3Alt />,
+                name: "CSS",
+            },
+            {
+                icon: <RiAngularjsFill />,
+                name: "Angular",
+            },
+        ],
     },
     {
         id: "3",
         title: "Lorem, ipsum.",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
+        techUsed: [
+            {
+                icon: <FaReact />,
+                name: "React",
+            },
+            {
+                icon: <RiTailwindCssFill />,
+                name: "Tailwind",
+            },
+            {
+                icon: <FaVuejs />,
+                name: "Vue",
+            },
+        ],
     },
     {
         id: "4",
         title: "Lorem, ipsum.",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
+        techUsed: [
+            {
+                icon: <FaHtml5 />,
+                name: "HTML",
+            },
+            {
+                icon: <FaCss3Alt />,
+                name: "CSS",
+            },
+            {
+                icon: <RiAngularjsFill />,
+                name: "Angular",
+            },
+        ],
     },
     {
         id: "5",
         title: "Lorem, ipsum.",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
+        techUsed: [
+            {
+                icon: <FaReact />,
+                name: "React",
+            },
+            {
+                icon: <RiTailwindCssFill />,
+                name: "Tailwind",
+            },
+            {
+                icon: <FaVuejs />,
+                name: "Vue",
+            },
+        ],
     },
     {
         id: "6",
         title: "Lorem, ipsum.",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         imgSrc: "https://aceternity.com/cdn-cgi/image/width=2048/https://assets.aceternity.com/macbook-scroll.png",
+        techUsed: [
+            {
+                icon: <FaHtml5 />,
+                name: "HTML",
+            },
+            {
+                icon: <FaCss3Alt />,
+                name: "CSS",
+            },
+            {
+                icon: <RiAngularjsFill />,
+                name: "Angular",
+            },
+        ],
     },
 ];
 

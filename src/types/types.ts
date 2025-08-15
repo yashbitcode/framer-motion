@@ -1,11 +1,17 @@
 import type React from "react";
 import type { CSSProperties } from "react";
 
+export interface stuffInterface {
+    icon: React.ReactNode;
+    name: string;
+}
+
 export interface projectInterface {
     id: string;
     title: string;
     desc: string;
     imgSrc: string;
+    techUsed: stuffInterface[];
 }
 
 export interface blogInterface {
@@ -30,7 +36,8 @@ export interface CustomContainerInterface {
     style?: CSSProperties;
 }
 
-export interface CustomInputInterface extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface CustomInputInterface
+    extends React.InputHTMLAttributes<HTMLInputElement> {
     type?: string;
     className?: string;
     style?: CSSProperties;
