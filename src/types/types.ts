@@ -48,3 +48,9 @@ export interface reviewInterface {
     review: string;
     avatar: string;
 }
+
+export interface TopHeadingInterface {
+    title: string;
+    desc: string;
+    tagLiner?: string[]
+}

@@ -1,10 +1,7 @@
-import { useState } from "react";
 import type { stuffInterface } from "../types/types";
 import { motion } from "motion/react";
 
 const ThingsExpander = ({ thingsUsed }: { thingsUsed: stuffInterface[] }) => {
-    // const [hovered, setHovered] = useState<null | number>(null);
-
     return (
         <div className="flex">
             {thingsUsed.map((el, idx) => (
@@ -23,12 +20,12 @@ const ThingsExpander = ({ thingsUsed }: { thingsUsed: stuffInterface[] }) => {
                     }}
                     className="shadow-primary relative flex h-8 items-center overflow-hidden rounded-full  text-xl bg-neutral-50"
                     style={{
-                        left: `${idx * -6}px`,
+                        left: `${idx * -8}px`,
                         zIndex: idx,
                     }}
                 >
-                    <div className="pl-1.5 h-5 w-5 ">{el.icon}</div>
-                    <motion.div layout className="pl-3 pr-2 text-[0.9rem] whitespace-nowrap">
+                    <div className="pl-1.5 h-5 w-5 text-primary">{el.icon}</div>
+                    <motion.div layout className="pl-3 pr-2 text-[0.9rem] font-semibold text-primary whitespace-nowrap">
                         {el.name}
                     </motion.div>
                 </motion.div>

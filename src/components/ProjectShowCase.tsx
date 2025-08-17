@@ -31,11 +31,11 @@ const ProjectShowCase = ({ projects }: { projects: projectInterface[] }) => {
                         className="transition-scale rounded-xl object-cover duration-200 group-hover:scale-[1.02]"
                     />
                     <motion.div className="mt-6 mb-4 transition-all duration-200 group-hover:ml-4">
-                        <h1 className="text-secondary text-xl font-semibold">
+                        <h1 className="text-primary text-xl font-semibold">
                             {el.title}
                         </h1>
                         <p className="text-secondary mt-2">{el.desc}</p>
-                        <div className="mt-4">
+                        <div className="mt-6">
                             <ThingsExpander thingsUsed={el.techUsed} />
                         </div>
                     </motion.div>

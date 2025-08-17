@@ -1,7 +1,11 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
+    --color-background: var(--color-neutral-100);
+    --color-mainBg: var(--color-white);
     --color-primary: var(--color-neutral-800);
     --shadow-primary:
         0px 2px 3px -1px #0000001a, 0px 1px 0px 0px #191c2105,
@@ -9,6 +13,13 @@
     --color-secondary: var(--color-neutral-500);
 }
 
-.dark {
-    --color-primary: var(--color-neutral-100);
-}
+/* @theme inline .dark {
+    --color-background: #0a0a0a;
+    --color-mainBg: #171717;
+    --color-primary: #e3e3e3;
+    --shadow-primary:
+        0px 2px 3px -1px #0000001a, 0px 1px 0px 0px #191c2105,
+        0px 0px 0px 1px #191c2114;
+    --color-secondary: oklch(.708 0 0);
+    --color-strip: #1b1b1b;
+} */

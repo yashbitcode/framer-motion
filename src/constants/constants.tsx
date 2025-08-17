@@ -1,5 +1,7 @@
+import { AiOutlinePython, AiOutlineRuby } from "react-icons/ai";
+import { FiFigma } from "react-icons/fi";
 import { RiAngularjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { FaCss3Alt, FaHtml5, FaJs, FaReact, FaVuejs } from "react-icons/fa";
+import { FaCss3Alt, FaHtml5, FaNodeJs, FaReact, FaVuejs } from "react-icons/fa";
 import type {
     blogInterface,
     projectInterface,
@@ -49,6 +51,14 @@ export const allProjects: projectInterface[] = [
                 icon: <FaVuejs />,
                 name: "Vue",
             },
+            {
+                icon: <FaNodeJs />,
+                name: "NodeJS",
+            },
+            {
+                icon: <FiFigma />,
+                name: "Figma",
+            },
         ],
     },
     {
@@ -68,6 +78,14 @@ export const allProjects: projectInterface[] = [
             {
                 icon: <RiAngularjsFill />,
                 name: "Angular",
+            },
+            {
+                icon: <AiOutlinePython />,
+                name: "Python",
+            },
+            {
+                icon: <AiOutlineRuby />,
+                name: "Ruby",
             },
         ],
     },
@@ -89,6 +107,14 @@ export const allProjects: projectInterface[] = [
                 icon: <FaVuejs />,
                 name: "Vue",
             },
+            {
+                icon: <FaNodeJs />,
+                name: "NodeJS",
+            },
+            {
+                icon: <FiFigma />,
+                name: "Figma",
+            },
         ],
     },
     {
@@ -108,6 +134,14 @@ export const allProjects: projectInterface[] = [
             {
                 icon: <RiAngularjsFill />,
                 name: "Angular",
+            },
+            {
+                icon: <AiOutlinePython />,
+                name: "Python",
+            },
+            {
+                icon: <AiOutlineRuby />,
+                name: "Ruby",
             },
         ],
     },
@@ -129,6 +163,14 @@ export const allProjects: projectInterface[] = [
                 icon: <FaVuejs />,
                 name: "Vue",
             },
+            {
+                icon: <FaNodeJs />,
+                name: "NodeJS",
+            },
+            {
+                icon: <FiFigma />,
+                name: "Figma",
+            },
         ],
     },
     {
@@ -148,6 +190,14 @@ export const allProjects: projectInterface[] = [
             {
                 icon: <RiAngularjsFill />,
                 name: "Angular",
+            },
+            {
+                icon: <AiOutlinePython />,
+                name: "Python",
+            },
+            {
+                icon: <AiOutlineRuby />,
+                name: "Ruby",
             },
         ],
     },
@@ -270,4 +320,14 @@ export const reviews: reviewInterface[] = [
         review: "Exceeded expectations in all ways—quality materials, smooth setup, and great value overall.",
         avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA%3D%3D",
     },
+];
+
+export const sideTagLine = [
+    "Full Stack Engineer",
+    "Front-end Engineer",
+    "Software Engineer",
+    "UX Designer",
+    "Gamer",
+    "Animator",
+    "Vibe Coding Engineer",
 ];
