@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import NextBlog from "./pages/blogs/mainBlogs/NextBlog";
 import TailwindBlog from "./pages/blogs/mainBlogs/TailwindBlog";
 import BlogFront from "./components/BlogFront";
+import Maskings from "./pages/Maskings";
 
 const AppLayout = () => {
     return (
@@ -24,6 +25,7 @@ const AppLayout = () => {
         </div>
     );
 };
+
 
 const routes = createBrowserRouter([
     {
@@ -66,6 +68,10 @@ const routes = createBrowserRouter([
             },
         ],
     },
+    {
+        path: "/masking",
+        element: <Maskings />
+    }
 ]);
 
 const App = () => {
